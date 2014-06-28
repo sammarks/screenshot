@@ -4,6 +4,7 @@ function url_exists($url)
 {
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_NOBODY, true);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	curl_exec($ch);
 	$retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	curl_close($ch);
@@ -20,7 +21,7 @@ $file_url = 'http://dl.dropboxusercontent.com/u/' . USERID . '/Screenshots/' . $
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Viewing Screenshot</title>
+		<title><?= htmlspecialchars($filename) ?></title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css" />
 	</head>
 	<body>

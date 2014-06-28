@@ -1,10 +1,14 @@
 <?php
 
-// From: http://stackoverflow.com/questions/2280394/how-can-i-check-if-a-url-exists-via-php/12628971#12628971
 function url_exists($url)
 {
-	if (!$fp = curl_init($url)) return false;
-	return true;
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_NOBODY, true);
+	curl_exec($ch);
+	$retcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	curl_close($ch);
+
+	return ($retcode == 200);
 }
 
 define('USERID', '14018873');

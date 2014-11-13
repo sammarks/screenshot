@@ -23,6 +23,13 @@ $file_url = 'http://dl.dropboxusercontent.com/u/' . USERID . '/Screenshots/' . $
 	<head>
 		<title><?= htmlspecialchars($filename) ?></title>
 		<link rel="stylesheet" type="text/css" href="styles/main.css" />
+		<meta property="og:site_name" content="Samuel Marks - Screenshots" />
+		<meta property="og:image" content="<?= $file_url ?>" />
+		<meta property="og:title" content="<?= htmlspecialchars($filename) ?>" />
+		<meta property="og:url" content="<?= $_REQUEST['SERVER_URL'] ?>" />
+		<meta name="twitter:image" value="<?= $file_url ?>" />
+		<meta name="twitter:card" value="photo" />
+		<meta name="twitter:site" value="@sammarks15" />
 	</head>
 	<body>
 		<a href="http://sammarks.me/" target="_blank" class="icon-logo branding"></a>

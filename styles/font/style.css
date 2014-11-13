@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'screenshot';
-	src:url('fonts/screenshot.eot?-qh06a2');
-	src:url('fonts/screenshot.eot?#iefix-qh06a2') format('embedded-opentype'),
-		url('fonts/screenshot.woff?-qh06a2') format('woff'),
-		url('fonts/screenshot.ttf?-qh06a2') format('truetype'),
-		url('fonts/screenshot.svg?-qh06a2#screenshot') format('svg');
+	font-family: 'sammarks';
+	src:url('fonts/sammarks.eot?-tk8wtd');
+	src:url('fonts/sammarks.eot?#iefix-tk8wtd') format('embedded-opentype'),
+		url('fonts/sammarks.woff?-tk8wtd') format('woff'),
+		url('fonts/sammarks.ttf?-tk8wtd') format('truetype'),
+		url('fonts/sammarks.svg?-tk8wtd#sammarks') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'screenshot';
+	font-family: 'sammarks';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

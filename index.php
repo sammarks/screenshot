@@ -17,6 +17,10 @@ define('USERID', '14018873');
 $filename = trim($_SERVER['REQUEST_URI'], '/');
 $file_url = 'http://dl.dropboxusercontent.com/u/' . USERID . '/Screenshots/' . $filename;
 
+if (strpos($_SERVER['HTTP_USER_AGENT'], 'Slack') !== false) {
+	header('Location: ' . $file_url);
+}
+
 ?>
 <!DOCTYPE html>
 <html>
